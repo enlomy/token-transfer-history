@@ -140,4 +140,3 @@ function formatDate(timestamp: number): string {
 }
 
 getHistory(new PublicKey('spaxkvvazpDRzDMMPze12HJeg2Q5yY5y7jEtmxN7WXL'), new PublicKey('G9tt98aYSznRk7jWsfuz9FnTdokxS6Brohdo9hSmjTRB'), Filter.Both)
-// test()

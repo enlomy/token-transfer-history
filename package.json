@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "ts-node-dev index.ts",
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@solana/spl-token": "0.4.3",
+    "@solana/web3.js": "^1.94.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/bs58": "^4.0.4",
+    "@types/dotenv": "^8.2.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}

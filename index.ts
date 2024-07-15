@@ -139,26 +139,5 @@ function formatDate(timestamp: number): string {
     return `${month} ${day}, ${year} ${hours}:${minutes}:${seconds} +UTC`;
 }
 
-const test = async () => {
-    const pubkey = new PublicKey('spaxkvvazpDRzDMMPze12HJeg2Q5yY5y7jEtmxN7WXL')
-    const mint = new PublicKey('G9tt98aYSznRk7jWsfuz9FnTdokxS6Brohdo9hSmjTRB')
-    const mintData = await solanaConnection.getParsedAccountInfo(mint)
-    // @ts-ignore
-    const decimals: number = mintData.value?.data.parsed.info.decimals
-    console.log(decimals)
-    const filter = Filter.Both
-
-    const decoded = await solanaConnection.getParsedTransaction('5McnWyfYjcERoucazBKAo7X9pAdu5fhSEUfQWdzPvLEG6d4N18YoJU2PuWEfsY8k2djYosVjpQfytQsY9fRs2nq5', {
-        maxSupportedTransactionVersion: 0,
-        commitment: 'confirmed'
-    })
-    const ata = getAssociatedTokenAddressSync(mint, pubkey)
-
-    if (decoded) {
-        const data = await getInfo(decoded, pubkey, ata, solanaConnection, decimals, filter)
-        console.log(data)
-    }
-}
-
 getHistory(new PublicKey('spaxkvvazpDRzDMMPze12HJeg2Q5yY5y7jEtmxN7WXL'), new PublicKey('G9tt98aYSznRk7jWsfuz9FnTdokxS6Brohdo9hSmjTRB'), Filter.Both)
 // test()

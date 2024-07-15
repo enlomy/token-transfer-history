@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "tsc --build && node dist/index.js",
     "dev": "ts-node-dev index.ts",
     "build": "tsc --build"
   },

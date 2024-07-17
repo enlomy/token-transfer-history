@@ -19,7 +19,7 @@ This project retrieves the transaction history for a given wallet address and to
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/poseisol/token-transfer-history.git
+    git clone https://github.com/dappsol/token-transfer-history.git
     cd token-transfer-history
     ```
 
